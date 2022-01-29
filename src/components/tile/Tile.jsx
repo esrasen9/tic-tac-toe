@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import "./Tile.css";
 import {useStateValue} from "../../Context";
+import {winnerIsExist} from "../../helper";
 
 const Tile = ({id}) => {
-    const {currentPlayer, setCurrentPlayer, board, setBoard, winnerIsExist} = useStateValue();
+    const {currentPlayer, setCurrentPlayer, board, setBoard} = useStateValue();
     const [value, setValue] = useState();
 
     useEffect(() => {
@@ -11,7 +12,7 @@ const Tile = ({id}) => {
     }, [board, id]);
 
     const handleAttack = () => {
-        let winner = winnerIsExist();
+        let winner = winnerIsExist(board);
         if (value) {
             return;
         }
