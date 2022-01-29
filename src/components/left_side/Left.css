@@ -1,0 +1,45 @@
+.left {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header-text {
+    font-size: 7rem;
+    margin-right: 20px;
+    font-weight: 900;
+    color: white;
+}
+
+.header-text:nth-child(1), .header-text:nth-child(2) {
+    margin-bottom: -40px;
+}
+
+.header-text:nth-child(1) {
+    color: #F641A5;
+}
+
+.header-text:nth-child(4) {
+    color: #F9C21C;
+}
+
+.restart-btn {
+    margin-top: 100px;
+    cursor: pointer;
+    padding: 20px 0;
+    width: 230px;
+    background-color: #06ccf6;
+    border: 0;
+    border-radius: 32px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+}

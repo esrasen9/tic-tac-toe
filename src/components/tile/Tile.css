@@ -1,0 +1,17 @@
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    cursor: pointer;
+    color: white;
+}
+
+.tile:not(:nth-child(3n)) {
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+}
+
+
+.tile:not(:nth-last-child(-n + 3)) {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.75);
+}
