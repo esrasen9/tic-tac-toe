@@ -41,5 +41,23 @@
     color: white;
     font-size: 1.4rem;
     font-weight: bold;
-    letter-spacing: 1.4px;
+}
+
+@media all and (max-width: 920px) {
+    .header {
+        margin-top: 50px;
+    }
+
+    .header-text {
+        font-size: 5rem;
+    }
+
+    .restart-btn {
+        margin-top: 30px;
+        cursor: pointer;
+        padding: 15px 0;
+        width: 170px;
+        color: white;
+        font-size: 1.2rem;
+    }
 }

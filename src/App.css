@@ -8,5 +8,13 @@
 .app {
     height: 100vh;
     display: flex;
-    background-color: #3f41de;
+    background-color: #686af5;
+}
+
+@media all and (max-width: 920px) {
+    .app {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
 }

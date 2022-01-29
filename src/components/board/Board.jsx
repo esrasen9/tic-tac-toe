@@ -1,11 +1,14 @@
 import React from 'react';
 import "./Board.css";
 import Tile from "../tile/Tile";
+import {useStateValue} from "../../Context";
 
 const Board = () => {
+    const {board} = useStateValue();
+
     return (
         <div className="board">
-            {[...Array(9)].map((t) => <Tile key={t}/>)}
+            {board.map((t, i) => <Tile id={i} key={i}/>)}
         </div>
     );
 }
