@@ -24,7 +24,7 @@ const Tile = ({idx}) => {
     }
 
     return (
-        <div className={`tile ${(value || winnerComb) ? "active" : ""}`} onClick={handleAttack}>
+        <div data-testid={`tile-${idx}`} className={`tile ${(value || winnerComb) ? "active" : ""}`} onClick={handleAttack}>
             {value}
         </div>
     );

@@ -6,7 +6,7 @@ import {useStateValue} from "../../../Context";
 const Board = () => {
     const {board} = useStateValue();
     return (
-        <div className="board">
+        <div className="board" data-testid="board">
             {board.map((t, i) => <Tile idx={i} key={i}/>)}
         </div>
     );

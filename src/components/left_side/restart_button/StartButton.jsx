@@ -1,5 +1,5 @@
 import React from 'react';
-import {useStateValue} from "../../Context";
+import {useStateValue} from "../../../Context";
 
 const StartButton = () => {
     const {board, setBoard, setNextPlayer, setWinnerComb, setEndGame} = useStateValue();
@@ -10,7 +10,9 @@ const StartButton = () => {
         setEndGame(false);
     }
     return (
-        <button onClick={restartGame} className="restart-btn">
+        <button className="restart-btn"
+                onClick={restartGame}
+                data-testid="restart-btn">
             NEW GAME
         </button>
     );

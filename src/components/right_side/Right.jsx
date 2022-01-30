@@ -5,7 +5,7 @@ import OrderPlayer from "./player/OrderPlayer";
 
 const Right = () => {
     return (
-        <div className="right">
+        <div className="right" data-testid="right">
             <OrderPlayer/>
             <Board/>
         </div>

@@ -3,12 +3,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: auto 0;
 }
 
 .header {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
 }
 
 .header-text {
@@ -26,12 +27,12 @@
     color: #F641A5;
 }
 
-.header-text:nth-child(4) {
+.header-text:nth-child(3) {
     color: #F9C21C;
 }
 
 .restart-btn {
-    margin-top: 100px;
+    margin: 70px 20px 0 0;
     cursor: pointer;
     padding: 20px 0;
     width: 230px;
@@ -43,9 +44,14 @@
     font-weight: bold;
 }
 
-.end-game-message {
-    color: #F9C21C;
+.game-result-container {
+    margin-right: 20px;
 }
+
+.game-result-message {
+    color: #06ccf6;
+}
+
 @media all and (max-width: 920px) {
     .header {
         margin-top: 50px;

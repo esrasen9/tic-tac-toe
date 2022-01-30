@@ -1,16 +1,16 @@
 import React from 'react';
 import "./Left.css";
-import StartButton from "./StartButton";
-import Header from "./Header";
-import EndMessage from "./EndMessage";
+import StartButton from "./restart_button/StartButton";
+import Header from "./header/Header";
+import EndMessage from "./game_end_message/EndMessage";
 import {useStateValue} from "../../Context";
 
 const Left = () => {
-    const {endGame}= useStateValue();
+    const {endGame} = useStateValue();
     return (
-        <div className="left">
+        <div className="left" data-testid="left">
             <Header/>
-            {endGame && <EndMessage />}
+            {endGame && <EndMessage/>}
             <StartButton/>
         </div>
     );

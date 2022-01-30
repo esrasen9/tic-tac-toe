@@ -1,7 +1,7 @@
 import React from 'react';
 import {useStateValue} from "../../../Context";
 
-const Player = ({player}) =>  {
+const Player = ({player}) => {
     const {nextPlayer} = useStateValue();
     const name = `player-${player}`;
     return (
