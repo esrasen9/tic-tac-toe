@@ -1,16 +1,16 @@
 import React from 'react';
 import "./Left.css";
 import StartButton from "./StartButton";
+import Header from "./Header";
+import EndMessage from "./EndMessage";
+import {useStateValue} from "../../Context";
 
 const Left = () => {
+    const {endGame}= useStateValue();
     return (
         <div className="left">
-            <div className="header">
-                <p className="header-text">X</p>
-                <p className="header-text">O</p>
-                <p className="header-text">T</p>
-                <p className="header-text">O</p>
-            </div>
+            <Header/>
+            {endGame && <EndMessage />}
             <StartButton/>
         </div>
     );

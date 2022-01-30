@@ -43,6 +43,9 @@
     font-weight: bold;
 }
 
+.end-game-message {
+    color: #F9C21C;
+}
 @media all and (max-width: 920px) {
     .header {
         margin-top: 50px;

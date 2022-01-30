@@ -1,7 +1,7 @@
 import React from 'react';
-import Board from "../board/Board";
+import Board from "./board/Board";
 import "./Right.css";
-import OrderPlayer from "./OrderPlayer";
+import OrderPlayer from "./player/OrderPlayer";
 
 const Right = () => {
     return (

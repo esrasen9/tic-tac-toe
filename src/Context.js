@@ -3,14 +3,20 @@ export const Context = createContext(null);
 
 const Provider = ({children}) => {
     const [board, setBoard] = useState(new Array(9).fill(null));
-    const [currentPlayer, setCurrentPlayer] = useState("X");
+    const [nextPlayer, setNextPlayer] = useState("x");
+    const [winnerComb, setWinnerComb] = useState();
+    const [endGame, setEndGame] = useState(false);
 
     const store = useMemo(() => ({
         board,
         setBoard,
-        currentPlayer,
-        setCurrentPlayer,
-    }), [board, currentPlayer]);
+        nextPlayer,
+        setNextPlayer,
+        winnerComb,
+        setWinnerComb,
+        endGame,
+        setEndGame
+    }), [board, nextPlayer, winnerComb, endGame]);
 
     return (
         <Context.Provider value={store}>

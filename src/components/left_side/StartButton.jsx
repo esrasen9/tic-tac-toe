@@ -2,10 +2,12 @@ import React from 'react';
 import {useStateValue} from "../../Context";
 
 const StartButton = () => {
-    const {board, setBoard, setCurrentPlayer} = useStateValue();
+    const {board, setBoard, setNextPlayer, setWinnerComb, setEndGame} = useStateValue();
     const restartGame = () => {
         setBoard([...board.fill(null)])
-        setCurrentPlayer("X");
+        setNextPlayer("x");
+        setWinnerComb(null);
+        setEndGame(false);
     }
     return (
         <button onClick={restartGame} className="restart-btn">
