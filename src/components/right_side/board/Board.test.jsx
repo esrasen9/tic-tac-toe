@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import Provider from "../../../Context";
 import Board from "./Board";
 
@@ -16,5 +16,9 @@ test("Board component have been loaded successfully.", () => {
         const tile = screen.getByTestId(`tile-${i}`);
         expect(tile).toBeInTheDocument();
         expect(tile).toHaveTextContent("");
+        expect(tile).toBeEnabled();
+        fireEvent.click(tile);
+        expect(tile).toHaveClass("active");
+        expect(tile).not.toHaveValue("");
     })
 })

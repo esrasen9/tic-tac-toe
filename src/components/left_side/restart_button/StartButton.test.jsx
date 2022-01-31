@@ -11,5 +11,7 @@ test("Restart button have been loaded successfully.",()=>{
 
     const button = screen.getByTestId("restart-btn");
     expect(button).toBeInTheDocument();
-    expect(button).toHaveTextContent("NEW GAME");
+    expect(button).toHaveTextContent(/new/i);
+    expect(button).toHaveClass("restart-btn");
+    expect(button).toBeEnabled();
 })

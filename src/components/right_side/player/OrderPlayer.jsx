@@ -3,7 +3,7 @@ import Player from "./Player";
 
 const OrderPlayer = () => {
     return (
-        <div className="order-player">
+        <div data-testid="order-player" className="order-player">
             <Player player="x"/>
             <Player player="o"/>
         </div>
