@@ -1,16 +1,17 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import Provider from "./Context";
+import Provider from './Context';
 
 test('Renders app components correctly', () => {
   render(
-      <Provider>
-        <App />
-      </Provider>
+    <Provider>
+      <App />
+    </Provider>,
   );
-  const leftSide = screen.getByTestId("left");
+  const leftSide = screen.getByTestId('left');
   expect(leftSide).toBeInTheDocument();
 
-  const rightSide = screen.getByTestId("right");
+  const rightSide = screen.getByTestId('right');
   expect(rightSide).toBeInTheDocument();
 });
