@@ -3,7 +3,7 @@
 ## Demo Website
 <hr>
 
-### 👉🏻 https://esrasen9.github.io
+### 👉🏻 https://esrasen9.github.io/tic-tac-toe
 
 ## Installation ⚡
 <hr>
